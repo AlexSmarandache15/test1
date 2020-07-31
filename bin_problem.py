@@ -13,30 +13,42 @@ def sortare(arie,latime,inaltime):
                 latime[k] = aux2
                 inaltime[k]= aux3
                 return 0
-def algoritm1(arie,latime,inaltime,n):
-    return 0
-def algoritm2(arie,latime,inaltime,n):
-    return 0
-def algoritm3(arie,latime,inaltime,n):
+def try_to_put_piece(piesa,latime,inaltime):
+    #codul functiei
     return 0
 n=int(input("Dati numarul de piese: "))
-a=input("Dati aria container: ")
-l=input("Dati latimea container: ")
-h=input("Dati inaltimea container: ")
+aria=input("Dati aria container: ")
+latime=input("Dati latimea container: ")
+inaltime=input("Dati inaltimea container: ")
 #citire arii
-print("obiectul ",0)
-arie=[int(input("Dati aria"))]
-latime=[int(input("Dati latimea"))]
-inaltime=[int(input("Dati inaltimea"))]
+print("\nobiectul ",0)
+a=[int(input("Dati aria  "))]
+l=[int(input("Dati latimea  "))]
+h=[int(input("Dati inaltimea  "))]
 for i in range(1,n):
-    print("obiectul ",i)
-    arie.append(int(input("Dati aria")))
-    latime.append(int(input("Dati latimea")))
-    inaltime.append(int(input("Dati inaltimea")))
+    print("\nobiectul ",i)
+    arie.append(int(input("Dati aria  ")))
+    latime.append(int(input("Dati latimea  ")))
+    inaltime.append(int(input("Dati inaltimea  ")))
 for i in range(n):
     print("[",arie[i],latime[i],inaltime[i],"]")
 sortare(arie,latime,inaltime)
 print("dupa sortare\n")
 for i in range(n):
     print("[",arie[i],latime[i],inaltime[i],"]")
+waste=0
+w=1
+nr_p=n
+obj_free_area=a
+fit=1
+while nr_p>0 :
+    #Fill the object until one third of its area is covered
+    #Register in memory every piece that does not fit
 
+    #from line 5 pseudocod
+    for piesa in arie:
+        if obj_free_area-piesa>waste:
+            break
+        if piesa>obj_free_area or fit==0:
+            continue
+        try_to_put_piece(piesa,latime,inaltime)
