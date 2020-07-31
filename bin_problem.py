@@ -1,3 +1,4 @@
+#Alex comentariu
 #prima incercare
 def sortare(arie,latime,inaltime):
     for i in range(0,n-1):
